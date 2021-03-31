@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+    />
+    <title>My Profile</title>
+  </head>
+  <body>
+    <div class="app">
+      <div id="container">My Profile</div>
+      <div class="bar">
+        <button
+          class="bar-item bar-selected"
+          onclick="openPage(event,'Profile')"
+        >
+          <i class="fa fa-user"></i>My Profile
+        </button>
+        <button class="bar-item" onclick="openPage(event,'Job')">
+          <i class="fa fa-briefcase"></i>Find a Job
+        </button>
+        <button class="bar-item" onclick="openPage(event,'Repositories')">
+          <i class="fa fa-file"></i>Repositories
+        </button>
+        <button class="bar-item" onclick="openPage(event,'Timeline')">
+          <i class="fa fa-history"></i>Timeline
+        </button>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
