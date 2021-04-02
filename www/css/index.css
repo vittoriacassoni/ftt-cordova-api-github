@@ -51,7 +51,7 @@ body {
 }
 
 .bar {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   color: #fff !important;
   background-color: #000 !important;

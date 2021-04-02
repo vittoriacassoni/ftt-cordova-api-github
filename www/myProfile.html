@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,11 +11,32 @@
       rel="stylesheet"
       href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
     />
+    <link rel="stylesheet" href="css/myProfile.css"/>
     <title>My Profile</title>
   </head>
   <body>
     <div class="app">
-      <div id="container">My Profile</div>
+      <div id="container">
+        <div class="avatar">
+          <img id="photo">
+        </div>
+        <div class="info">
+          <strong id="name"></strong>
+          <span id="login"></span>
+          <span id="bio"></span>
+        </div>       
+        <div class="status">
+          <div>
+            <img src="./img/users.svg">
+            <strong id="followers">15</strong>
+            <span >followers</span>
+          </div>
+          <div>           
+            <strong id="following">9</strong>
+            <span>following</span>
+          </div>                 
+        </div>
+      </div>
       <div class="bar">
         <button
           class="bar-item bar-selected"
@@ -31,8 +53,12 @@
         <button class="bar-item" onclick="openPage(event,'Timeline')">
           <i class="fa fa-history"></i>Timeline
         </button>
+      
       </div>
     </div>
     <script src="js/index.js"></script>
+    <!-- javascript -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/myProfile.js"></script>
   </body>
 </html>
