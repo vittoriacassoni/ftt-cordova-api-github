@@ -98,6 +98,7 @@ body {
   line-height: 18px;
   display: block;
   height: 110px;
+  overflow-y: scroll;
 }
 
 .card .tags {
