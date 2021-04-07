@@ -112,3 +112,12 @@ body {
   color: var(--tertiary);
   font-weight: bold;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #837bdb;
+  border-radius: 10px;
+}
