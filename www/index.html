@@ -32,7 +32,22 @@
   </head>
   <body>
     <div class="app">
-      <div id="container"></div>
+      <div id="container" class="index">
+        <div class="search">
+          <div class="input-area">
+            <h2>Informe o nome de usuário do seu GitHub</h2>
+            <input
+              type="text"
+              id="nameGithub"
+              placeholder="Usuário do Github"
+            />
+          </div>
+          <span id="error" class="erro d-none">Usuário não encontrado!</span>
+          <button type="button" onclick="search(event)">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
       <div class="bar">
         <button
           class="bar-item bar-selected"
@@ -51,6 +66,7 @@
         </button>
       </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

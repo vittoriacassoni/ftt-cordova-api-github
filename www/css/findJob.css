@@ -1,11 +1,30 @@
+body {
+  background-color: #25272b;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .search {
   display: flex;
   flex-direction: column;
   padding: 5px;
+  align-items: center;
+  width: 320px;
 }
 
 .search-row {
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  justify-content: space-between;
+}
+
+.container-slider {
   display: flex;
   align-items: center;
 }
@@ -14,7 +33,7 @@
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 34px;
+  height: 30px;
 }
 
 .switch input {
@@ -27,9 +46,11 @@
 .switch-text {
   margin-right: 10px;
   font-size: 13px;
+  -webkit-text-fill-color: white;
 }
 
 .slider {
+  height: 30px;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -39,13 +60,14 @@
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  width: 50px;
 }
 
 .slider:before {
   position: absolute;
   content: '';
-  height: 26px;
-  width: 26px;
+  height: 22px;
+  width: 22px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -54,17 +76,17 @@
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #3a41a8;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #3a41a8;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 /* Rounded sliders */
@@ -77,17 +99,26 @@ input:checked + .slider:before {
 }
 
 input[type='text'] {
-  margin-right: 10px;
-  width: 130px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+  width: 135px;
   height: 25px;
   padding: 4px;
-  background-color: #efefef;
-  border: #efefef solid 2px;
+  outline: none;
+  -webkit-text-fill-color: white;
+}
+
+input[type='text']:first-child {
+  margin-right: 5px;
+}
+
+input[type='text']::placeholder {
+  -webkit-text-fill-color: #ccc;
 }
 
 input[type='text']:hover {
-  border: #2196f3 solid 2px;
-  border-radius: 1px;
+  border-bottom: #3a41a8 solid 2px;
   text-decoration: none;
   outline: none;
 }
@@ -95,51 +126,84 @@ input[type='text']:hover {
 .search button {
   float: left;
   width: 40px;
-  padding: 10px;
-  background: #2196f3;
+  height: 30px;
+  background: #3a41a8;
   color: white;
   font-size: 17px;
   border: none;
   cursor: pointer;
-  margin-left: 100px;
+  margin-left: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
 }
 
 .search button:hover {
-  background: #0b7dda;
+  background: #2e3485;
 }
 
 .card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
   max-width: 400px;
+  color: #fff;
+  background-color: #1a1b1f;
+  padding: 16px;
+  padding-top: 10px;
+  height: 400px;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.card a {
+  color: #3a41a8;
 }
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+  height: 400px;
 }
 
 .jobs {
   padding: 5px;
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 320px;
   grid-gap: 10px;
+  overflow-x: unset;
 }
 
 .job-title {
   display: flex;
   align-items: center;
-  color: #0059a0;
+  color: #3a41a8;
   font-size: 14px;
   font-weight: bold;
+  justify-content: space-between;
 }
 
 .job-title i {
   margin-left: 8px;
+  font-size: 18px;
+}
+
+.job-description {
+  overflow-y: auto;
+  height: 320px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #837bdb;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #494381;
 }

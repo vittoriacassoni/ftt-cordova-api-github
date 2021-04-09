@@ -39,12 +39,8 @@ function createNewsCards(nData) {
 }
 
 function reloadPage() {
-
-  //TODO: Substituir a url fixa pela da variavel, e adaptar o userName para o nome certo da tag
-  //document.getElementById("userName").innerHTML = "";
-  //url = "https://api.github.com/users/" + userName +  "/repos"
-
-  url = "https://api.github.com/users/alveslaura/repos"
+  var username = window.localStorage.getItem('user');
+  url = `https://api.github.com/users/${username}/repos`;
 
   var xhr = new XMLHttpRequest();
 

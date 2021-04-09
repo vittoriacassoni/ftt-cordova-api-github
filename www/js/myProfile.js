@@ -1,8 +1,8 @@
 //mudar o parâmetro após 'users/' da url para visualizar outro perfil 
+var username = window.localStorage.getItem('user');
 
-axios.get(`https://api.github.com/users/alveslaura`).then(respostaAPI);
+axios.get(`https://api.github.com/users/${username}`).then(respostaAPI);
 function respostaAPI(reposta){
-    console.log(reposta.data);
     const photo = document.getElementById('photo');
     photo.setAttribute('src',reposta.data.avatar_url);
 
@@ -20,5 +20,8 @@ function respostaAPI(reposta){
 
     const following = document.getElementById('following');
     following.innerText = reposta.data.following;
+
+    const location = document.getElementById('location');
+    location.innerText = reposta.data.location;
 
 }

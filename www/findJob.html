@@ -22,17 +22,19 @@
             <input type="text" id="location" placeholder="Localização.." />
           </div>
           <div class="search-row">
-            <label class="switch-text">Tempo Integral</label>
-            <label class="switch">
-              <input
-                type="checkbox"
-                id="fulltime"
-                onchange="fullTimeChange()"
-              />
-              <span class="slider round"></span>
-            </label>
+            <div class="container-slider">
+              <label class="switch-text">Tempo Integral</label>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  id="fulltime"
+                  onchange="fullTimeChange()"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
 
-            <button type="button" onclick="search()">
+            <button type="button" onclick="searchJobsClick()">
               <i class="fa fa-search"></i>
             </button>
           </div>

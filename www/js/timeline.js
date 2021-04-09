@@ -1,4 +1,6 @@
-axios.get(`https://api.github.com/users/vittoriacassoni/events/public`).then(respostaAPI);
+var username = window.localStorage.getItem('user');
+
+axios.get(`https://api.github.com/users/${username}/events/public`).then(respostaAPI);
 function respostaAPI(resposta) {
     console.log(resposta.data);
 

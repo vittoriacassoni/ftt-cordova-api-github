@@ -1,18 +1,5 @@
-function getHTMLFile(path, success, failure) {
-    const xhr = new XMLHttpRequest()
-    xhr.open('GET', path)
-  
-    xhr.onload = () => {
-      if (xhr.status == 200)
-        success(xhr.response)
-      else if (failure)
-        failure(xhr.status)
-    }
-  
-    xhr.send()
-  }
-
-  function openPage(event, page){
+var username = "";
+function openPage(event, page){
       let file = 'myProfile.html';
     switch (page) {
         case 'Profile':
@@ -33,3 +20,23 @@ function getHTMLFile(path, success, failure) {
 
       window.location.replace(file);
   }
+
+
+  function search(event){
+    let username = document.getElementById('nameGithub').value;
+    console.log(username);
+    axios.get(`https://api.github.com/users/${username}`).then((response) =>{
+      window.localStorage.removeItem('user');
+      window.localStorage.setItem('user', username);
+      
+      openPage(event, "Profile");
+    })
+    .catch((error) => {
+      const el = document.querySelector('#error');
+      if (el.classList.contains("d-none")) {
+        el.classList.remove("d-none");
+      }
+    });
+  }
+
+  

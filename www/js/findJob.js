@@ -1,6 +1,6 @@
 let fullTime = false;
 
-function search(){
+function searchJobsClick(){
   let description = document.getElementById("description").value;
   let location = document.getElementById("location").value;
   
@@ -26,8 +26,10 @@ function searchJob(response){
                   ${job.type == "Full Time" ? "<i class='fa fa-clock-o'></i>" : 
                   "<i class='fa fa-files-o'></i>"}
                 </div>
+                <div class="job-description">
                 ${job.description}
                 <b>Inscreva-se:</b>${job.how_to_apply}
+                </div>
               </div>
             </div>`
   });

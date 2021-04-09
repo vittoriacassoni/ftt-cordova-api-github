@@ -1,67 +1,75 @@
 #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  color: #fff;
+}
+
+body {
+  background-color: #25272b;
 }
 
 .avatar {
-    width: 200px;
-    height:200px;
-    overflow: hidden;
-    border-radius: 50%;
-    
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .avatar img {
-    width: 100%;
+  width: 100%;
 }
 
 .info {
-  margin-top:32px;
+  margin-top: 32px;
 }
 
 .info strong {
-    display: block;
-    text-transform: none;
-    font-size: 18px;
-    text-align:center;
+  display: block;
+  text-transform: none;
+  font-size: 18px;
+  text-align: center;
+  color: #3a41a8;
+  font-weight: bold;
 }
 
 .info span {
-    display:block;
-    margin-top: 5px;
-    text-transform: none;
-    font-size: 15px;
-    text-align:center;
+  display: block;
+  margin-top: 5px;
+  text-transform: none;
+  font-size: 15px;
+  text-align: center;
 }
 
-.status{
-    margin-top: 15px;
-    display:flex;
-    align-items: center;
+.info #bio {
+  font-style: italic;
+}
+
+.status {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .status div {
-    display: flex;
-    align-items: center;   
+  display: flex;
+  align-items: center;
 }
 
-.status div img{
-    width: 15px;
-    height: 15px;
+.status i {
+  margin-right: 5px;
 }
 
-.status div strong{
-    margin-right: 5px;
+.status div strong {
+  margin-right: 5px;
 }
 
-.status div span{
-    text-transform: none;
+.status div span {
+  text-transform: none;
 }
 
 .status div + div {
-    margin-left: 8px;
-
+  margin-left: 8px;
 }
