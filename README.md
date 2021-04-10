@@ -54,6 +54,7 @@ Se o usuário selecionar a opção "Timeline" aparecerá uma linha do tempo com 
 - CSS
 - JavaScript
 - Axios
+- Cordova
 
 ## Desenvolvedoras
 
